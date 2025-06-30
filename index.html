@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauteng Modern Pentathlon Laser Run Championships</title>
+    <script src="https://cdn.tailwindcss.com" defer></script> <style>
+        /* Custom styles for the app */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background, keeps good contrast */
+            margin: 0;
+            padding-top: 64px; /* Space for fixed navbar */
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #2d3748; /* Dark gray for general text */
+        }
+        .navbar {
+            background-color: #0f79b7; /* Primary Blue for navbar */
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .navbar-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .nav-links a {
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background-color 0.2s, transform 0.1s;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            background-color: #0b6094; /* Slightly darker blue for hover effect */
+            transform: translateY(-1px);
+        }
+        .section-container {
+            max-width: 900px;
+            margin: 32px auto;
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            border: 1px solid #e2e8f0; /* Light border */
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #0f79b7; /* Primary Blue for section titles */
+            margin-bottom: 24px;
+            text-align: center;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0f79b7; /* Primary Blue underline */
+        }
+        .content-block {
+            margin-bottom: 24px;
+            padding: 16px;
+            background-color: #fff8e1; /* Very light yellow for content blocks */
+            border-left: 4px solid #0f79b7; /* Primary Blue left border */
+            border-radius: 8px;
+        }
+        .content-block h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4a5568; /* Dark gray for subheadings */
+            margin-bottom: 12px;
+        }
+        .content-block p, .content-block ul {
+            font-size: 1.1rem;
+            color: #4a5568; /* Dark gray for text */
+        }
+        .content-block ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .content-block ul li {
+            margin-bottom: 8px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0f79b7; /* Primary Blue for back to top button */
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            line-height: 1;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s, transform 0.1s;
+            z-index: 999;
+        }
+        .back-to-top:hover {
+            background-color: #0b6094; /* Darker blue on hover */
+            transform: translateY(-2px);
+        }
+        /* Specific text color adjustments based on new palette */
+        .text-blue-700-custom { /* Replaces text-indigo-700 */
+            color: #0f79b7; /* Primary blue for main invitation text */
+        }
+        .link-blue-custom { /* Primary blue for links */
+            color: #0f79b7;
+        }
+        .registration-link-button {
+            display: inline-block; /* Make it behave like a button */
+            background-color: #fdcf00; /* Yellow for the button */
+            color: #2d3748; /* Dark text for contrast on yellow */
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none; /* Remove underline from link */
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .registration-link-button:hover {
+            background-color: #fdd835; /* Slightly lighter yellow on hover */
+            transform: translateY(-1px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width:
